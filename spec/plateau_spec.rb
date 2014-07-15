@@ -1,1 +1,0 @@
-plateau_spec.rb
