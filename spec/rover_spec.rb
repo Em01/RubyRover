@@ -38,15 +38,29 @@ end
     expect(rover.facing).to eq("W")
   end
 
+  it 'should be able to take multiple rotational commands' do 
+    rover.turn("0 0 N", "RLL")
+    expect(rover.facing).to eq ("W")
+  end
+
   end
 
   context 'Rover moves in steps' do 
+
+    it 'should be able to move one step along the y axis' do 
+    rover.steps
+    rover.now_facing("R")
+    expect(rover.y).to eq(3)
+  end
+
+    # it 'should be able to move one step along the x axis' do
 
   it 'should be able to move one step' do 
     rover.steps
     expect(rover.x).to eq(1)
     expect(rover.y).to eq(3)
   end
+  # rover moves one step on y axis
 
   it 'should be able to move and change direction' do 
   rover.steps
