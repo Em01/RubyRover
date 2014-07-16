@@ -19,5 +19,26 @@ describe Plateau do
     expect(plateau.locations).to eq 25
   end
 
+
+
+# context 'if a location is not within the boundary' do 
+
+# it 'should raise an error if the x boundary is crossed' do 
+# end
+
+# it 'should raise and error if the y boundary is crossed' do 
+# end
+
+# it 'should return false if the x boundary is not crossed' do
+#   end
+
+#   it 'should return false if the y boundary is not crossed' do 
+
+#   end
+
+
+
+
+
 end
 end
