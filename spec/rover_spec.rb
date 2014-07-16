@@ -6,29 +6,34 @@ require 'rover'
   let (:rover) {Rover.new}
 
   
-  context 'Rover position'
+    context 'Rover position' do
 
-    it 'should know its start facing direction' do 
+  it 'should know its start facing direction' do 
     expect(rover.direction("1 2 N")).to eq ("N")
   end
 
-    it 'should know its start coordinates' do 
+  it 'should know its start coordinates' do 
       expect(rover.coordinates("1 2 N")).to eq ("1,2")
   end
 
- context 'Changing direction on the compass'
-
- it 'should be able to change its facing direction to the right by 90 degrees' do 
-  rover.turn("0 0 N", "R")
-  expect(rover.facing).to eq("E")
 end
+
+    context 'Changing direction on the compass' do
+
+  it 'should be able to change its facing direction to the right by 90 degrees' do 
+    rover.turn("0 0 N", "R")
+    expect(rover.facing).to eq("E")
+  end
  
-it 'should be able to change its facing direction to the left by 90 degrees' do
- rover.turn("0 0 N", "L")
- expect(rover.facing).to eq("W")
+  it 'should be able to change its facing direction to the left by 90 degrees' do
+    rover.turn("0 0 N", "L")
+    expect(rover.facing).to eq("W")
+  end
+
+  end
 end
 
-end
+
 
 
 
