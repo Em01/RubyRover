@@ -24,17 +24,29 @@ def turn(current_position, instruction)
   @facing = compass[now_facing(instruction)]
 end
   
-def now_facing(instruction)
-  integer = 0
-  if instruction == "R"
-    integer += 1
-  else instruction == "L"
-    integer -= 1
+
+  def now_facing(instruction)
+    integer = 0
+    if instruction == "R"
+      integer += 1
+    else instruction == "L"
+      integer -= 1
+    end
   end
-end
 
+  def steps
+    if @facing == "N"
+      @y += 1
+    elsif @facing == "E"
+      @x += 1
+    elsif @facing == "S"
+      @y -= 1
+    else
+      @x -= 1
+    end
+  end
 
-
+   
 
 
 

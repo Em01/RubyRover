@@ -5,6 +5,7 @@ require 'rover'
   describe Rover do
   let (:rover) {Rover.new}
 
+
   
     context 'Rover position' do
 
@@ -38,17 +39,32 @@ end
   end
 
   end
+
+  context 'Rover moves in steps' do 
+
+  it 'should be able to move one step' do 
+    rover.steps
+    expect(rover.x).to eq(1)
+    expect(rover.y).to eq(3)
+  end
+
+  it 'should be able to move and change direction' do 
+  rover.steps
+  rover.now_facing("L")
+  rover.steps
+
+  end
+
+  it 'should be able to move, change its direction and then move again' do 
+    rover.steps
+    rover.now_facing("L")
+    rover.steps
+    expect(rover.x).to eq(1)
+    expect(rover.y).to eq(4)
+end
 end
 
-#   context 'Rover movement' do
-
-#     it 'should be able to make a singular movement' do
-#       rover.move
-#       expect
-#     end 
-# end
-
-
+end
 
 
 
