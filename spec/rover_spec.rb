@@ -10,7 +10,7 @@ require 'rover'
     context 'Rover position' do
 
   it 'should know its start facing direction' do 
-    expect(rover.direction("1 2 N")).to eq ("N")
+    expect(rover.direction("0 0  N")).to eq ("N")
   end
 
 
@@ -53,14 +53,21 @@ end
     expect(rover.y).to eq(3)
   end
 
-    # it 'should be able to move one step along the x axis' do
-
+    it 'should be able to move one step along the x axis' do
+    rover.turn("0 0 N", "R")
+    rover.steps
+    expect(rover.x).to eq(2)
+    rover.now_facing("R")
+    rover.steps
+    expect(rover.x).to eq(3)
+    
+  end
   it 'should be able to move one step' do 
     rover.steps
     expect(rover.x).to eq(1)
     expect(rover.y).to eq(3)
   end
-  # rover moves one step on y axis
+  
 
   it 'should be able to move and change direction' do 
   rover.steps
@@ -69,16 +76,34 @@ end
 
   end
 
-  it 'should be able to move, change its direction and then move again' do 
+  it 'should be able to move, change its direction and then move again for the y axis' do 
     rover.steps
     rover.now_facing("L")
     rover.steps
     expect(rover.x).to eq(1)
     expect(rover.y).to eq(4)
 end
-end
 
 end
+
+  it 'should be able to move, change its direction and then move again for the x axis' do 
+    rover.turn("0 0 N", "R")
+    rover.steps
+    rover.steps
+    expect(rover.x).to eq(3)
+    expect(rover.y).to eq(2)
+  end
+end
+
+
+
+
+
+
+
+
+
+
 
 
 
