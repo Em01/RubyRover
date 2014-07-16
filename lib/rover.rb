@@ -2,9 +2,12 @@ require 'plateau'
 
 class Rover
 
-  attr_accessor :facing
+  attr_accessor :x, :y, :facing
 
 def initialize
+  @x = 1
+  @y = 2
+  @facing = "N"
   end
 
   def direction(current_position)

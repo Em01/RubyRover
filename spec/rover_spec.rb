@@ -12,9 +12,16 @@ require 'rover'
     expect(rover.direction("1 2 N")).to eq ("N")
   end
 
-  it 'should know its start coordinates' do 
-      expect(rover.coordinates("1 2 N")).to eq ("1,2")
+
+
+  it 'should know its start coordinates on the x axis' do 
+       expect(rover.x).to eq (1)
   end
+
+  it 'should know its start coordinates on the y axis' do 
+       expect(rover.y).to eq (2)
+  end
+
 
 end
 
@@ -32,6 +39,14 @@ end
 
   end
 end
+
+#   context 'Rover movement' do
+
+#     it 'should be able to make a singular movement' do
+#       rover.move
+#       expect
+#     end 
+# end
 
 
 
