@@ -16,11 +16,11 @@ require 'rover'
 
 
   it 'should know its start coordinates on the x axis' do 
-       expect(rover.x).to eq (1)
+       expect(rover.x).to eq (0)
   end
 
   it 'should know its start coordinates on the y axis' do 
-       expect(rover.y).to eq (2)
+       expect(rover.y).to eq (0)
   end
 
 
@@ -50,22 +50,22 @@ end
     it 'should be able to move one step along the y axis' do 
     rover.steps
     rover.now_facing("R")
-    expect(rover.y).to eq(3)
+    expect(rover.y).to eq(1)
   end
 
     it 'should be able to move one step along the x axis' do
     rover.turn("0 0 N", "R")
     rover.steps
-    expect(rover.x).to eq(2)
+    expect(rover.x).to eq(1)
     rover.now_facing("R")
     rover.steps
-    expect(rover.x).to eq(3)
-    
+    expect(rover.x).to eq(2)
+
   end
   it 'should be able to move one step' do 
     rover.steps
-    expect(rover.x).to eq(1)
-    expect(rover.y).to eq(3)
+    expect(rover.x).to eq(0)
+    expect(rover.y).to eq(1)
   end
   
 
@@ -80,8 +80,8 @@ end
     rover.steps
     rover.now_facing("L")
     rover.steps
-    expect(rover.x).to eq(1)
-    expect(rover.y).to eq(4)
+    expect(rover.x).to eq(0)
+    expect(rover.y).to eq(2)
 end
 
 end
@@ -90,9 +90,26 @@ end
     rover.turn("0 0 N", "R")
     rover.steps
     rover.steps
-    expect(rover.x).to eq(3)
-    expect(rover.y).to eq(2)
+    expect(rover.x).to eq(2)
+    expect(rover.y).to eq(0)
   end
+
+
+
+#   it 'will not move unles in receives instructions to do so' do
+#   end
+
+#   context 'the rover boundaries' do 
+#     it 'raises an error if it is out of bounds' do
+#     end
+# end
+
+
+
+
+
+
+
 end
 
 
@@ -104,14 +121,6 @@ end
 
 
 
-
-
-
-
-
-
-
- #take multiple rotational commands
 
  #plataeu can have rover added
 
