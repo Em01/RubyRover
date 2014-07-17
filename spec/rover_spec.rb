@@ -4,7 +4,7 @@ require 'rover'
 
   describe Rover do
   let (:rover) {Rover.new}
-
+ 
 
   
     context 'Rover position' do
@@ -96,13 +96,15 @@ end
 
 
 
-#   it 'will not move unles in receives instructions to do so' do
-#   end
+   # it 'will remain static until it receives input data' do
+   # end
 
-#   context 'the rover boundaries' do 
-#     it 'raises an error if it is out of bounds' do
-#     end
-# end
+ #  context 'the rover boundaries' do 
+ #    it 'raises an error if it is out of bounds' do
+  
+ # end
+
+
 
 
 
@@ -126,13 +128,13 @@ end
 
  #can update current position
 
- #rotate and move at the same time???
+ 
 
  #should kno if a position is not plat
 
  #how the rover interprets input...gets chomp
 
- #the satellite & how the two communicate
+ 
 
  #compass
 
