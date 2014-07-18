@@ -38,8 +38,11 @@ require 'rover'
     expect(arrays).to eq ["1 2", "3 4", "5 6", "6 7", "8 9"]
   end
 
-  # it 'can read only certain items from the array of arrays' do
-  # end
+   it 'can read only certain items from the array of arrays' do
+  arrays = [["1 2"],["3 4"],["5 6"],["6 7"], ["8 9"]]
+  arrays.find { |a| a.first }
+  expect(arrays.first).to eq ["1 2"]
+  end
 
   it 'can remove the first line of the input file' do
     input = IO.read('spec/instructions/input.txt').lines

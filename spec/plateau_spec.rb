@@ -19,8 +19,6 @@ describe Plateau do
     expect(plateau.locations).to eq 25
   end
 
-it 'should know its boundaries' do
-end
 
 # context 'if a location is not within the boundary' do 
 
