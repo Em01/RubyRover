@@ -5,12 +5,11 @@ class Rover
 
   attr_accessor :x, :y, :facing
 
-def initialize
-  @x = 0
-  @y = 0
-  @facing = "N"
+  def initialize
+    @x = 0
+    @y = 0
+    @facing = "N"
   end
-
 
 
   def direction(current_position)
@@ -21,13 +20,11 @@ def initialize
     current_coordinates.split.take(2).join(',')
   end
 
+  def turn(current_position, instruction)
+    compass = ["N", "E", "S", "W"]
+    @facing = compass[now_facing(instruction)]
+  end
   
-def turn(current_position, instruction)
-  compass = ["N", "E", "S", "W"]
-  @facing = compass[now_facing(instruction)]
-end
-  
-
   def now_facing(instruction)
     integer = 0
     if instruction == "R"
@@ -48,27 +45,5 @@ end
       @x -= 1
     end
   end
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 end
