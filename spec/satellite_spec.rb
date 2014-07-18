@@ -7,7 +7,7 @@ require 'satellite'
     let(:rovers) {Rovers.new} 
 
 
-      it 'can recieve input from the input data file as an array' do 
+      it 'can receive input from the input data file as an array' do 
         expect(satellite.input).to eq ["5 5\n", "1 2 N\n", "LMLMLMLMM\n", "3 3 E\n", "MMRMMRMRRM"]
       end
 
@@ -52,7 +52,6 @@ require 'satellite'
         expect(input).to eq ["1 2 N\n", "LMLMLMLMM\n", "3 3 E\n", "MMRMMRMRRM"]
       end
 
-  
       it 'should interpret the desired final output for the rover positions' do 
         expect(satellite.output_rovers).to eq([[1,3,"N"],[5,1,"E"]])
       end
