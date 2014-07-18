@@ -10,6 +10,8 @@ def initialize
   @facing = "N"
   end
 
+
+
   def direction(current_position)
     current_position.split.last
   end
