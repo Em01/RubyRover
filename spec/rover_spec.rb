@@ -94,55 +94,12 @@ end
     expect(rover.y).to eq(0)
   end
 
-
-
-   # it 'will remain static until it receives input data' do
-   # end
-
- #  context 'the rover boundaries' do 
- #    it 'raises an error if it is out of bounds' do
-  
- # end
-
-
-
-
-
-
-
-
+    
 
 end
 
 
 
 
-
-
-
-
-
-
-
- #plataeu can have rover added
-
- #can update current position
-
- 
-
- #should kno if a position is not plat
-
- #how the rover interprets input...gets chomp
-
- 
-
- #compass
-
-
-
-
-# end
-
-  
 
 

@@ -49,7 +49,10 @@ require 'rover'
     input.shift
     expect(input).to eq ["1 2 N\n", "LMLMLMLMM\n", "3 3 E\n", "MMRMMRMRRM"]
   end
+
 end
 
+
+ 
 
   

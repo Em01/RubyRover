@@ -9,7 +9,6 @@ class Satellite
     @input = input.lines
   end
 
-  
 
 end
 
@@ -17,3 +16,5 @@ end
 
 
 
+
+  
