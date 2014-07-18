@@ -8,6 +8,51 @@ I have made some assumtions such as that the rovers are aleady initialized by th
 
 In the future i would like to work on breaking down classes further for clarity purposes and maybe think about introducing a class for the compass which was an idea i had when i approached the problem at the beginning. I would also like to work on the Satellite and the Rovers being able to communicate in a more developed manner. Finally it would be nice to implement some front end aspects to the project.
 
+RSpec was used for TDD and i have pasted below the final test
+
+
+
+Emmas-MacBook-Pro:marsrover Emma01$ rspec
+
+Plateau
+  upon ititialization
+    should have a set width
+    should have a set height
+    should have a set number of locations
+    the boundaries
+      should return true if an object is within limits
+      should return false if an object is withing limits
+
+Rover
+  should be able to move, change its direction and then move again for the x axis
+  Rover position
+    should know its start facing direction
+    should know its start coordinates on the x axis
+    should know its start coordinates on the y axis
+  Changing direction on the compass
+    should be able to change its facing direction to the right by 90 degrees
+    should be able to change its facing direction to the left by 90 degrees
+    should be able to take multiple rotational commands
+  Rover moves in steps
+    should be able to move one step along the y axis
+    should be able to move one step along the x axis
+    should be able to move one step
+    should be able to move and change direction
+    should be able to move, change its direction and then move again for the y axis
+
+Satellite
+  can receive input from the input data file as an array
+  can turn a string into an array
+  can turn an an array of strings into integers
+  can take specific parts of the array as instructions
+  can make an array of arrays
+  can make the elements within an array of arrays strings
+  can read only certain items from the array of arrays
+  can remove the first line of the input file
+  should interpret the desired final output for the rover positions
+
+Finished in 0.01034 seconds (files took 0.24797 seconds to load)
+26 examples, 0 failures
 
 
 
