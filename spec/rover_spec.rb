@@ -3,7 +3,10 @@ require 'rover'
 
 
   describe Rover do
+  
+  let(:max_limit) {"5 5"} 
   let (:rover) {Rover.new}
+  let (:rover2) {Rover.new}
  
 
   
@@ -48,38 +51,38 @@ end
   context 'Rover moves in steps' do 
 
     it 'should be able to move one step along the y axis' do 
-    rover.steps
+    rover.M 
     rover.now_facing("R")
     expect(rover.y).to eq(1)
   end
 
     it 'should be able to move one step along the x axis' do
     rover.turn("0 0 N", "R")
-    rover.steps
+    rover.M
     expect(rover.x).to eq(1)
     rover.now_facing("R")
-    rover.steps
+    rover.M
     expect(rover.x).to eq(2)
 
   end
   it 'should be able to move one step' do 
-    rover.steps
+    rover.M
     expect(rover.x).to eq(0)
     expect(rover.y).to eq(1)
   end
   
 
   it 'should be able to move and change direction' do 
-  rover.steps
+  rover.M
   rover.now_facing("L")
-  rover.steps
+  rover.M
 
   end
 
   it 'should be able to move, change its direction and then move again for the y axis' do 
-    rover.steps
+    rover.M
     rover.now_facing("L")
-    rover.steps
+    rover.M
     expect(rover.x).to eq(0)
     expect(rover.y).to eq(2)
 end
@@ -88,8 +91,8 @@ end
 
   it 'should be able to move, change its direction and then move again for the x axis' do 
     rover.turn("0 0 N", "R")
-    rover.steps
-    rover.steps
+    rover.M
+    rover.M
     expect(rover.x).to eq(2)
     expect(rover.y).to eq(0)
   end

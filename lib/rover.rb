@@ -37,7 +37,7 @@ end
     end
   end
 
-  def steps
+  def M
     if @facing == "N"
       @y += 1
     elsif @facing == "E"
